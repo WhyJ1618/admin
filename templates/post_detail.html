@@ -1,0 +1,11 @@
+<!-- post_detail.html -->
+{% extends 'base.html' %} {% block content %}
+<h1>{{ post.title }}</h1>
+<hr>
+<p>{{ post.content }}</p>
+<hr>
+<p>{{ post.created_at }}</p>
+<p>{{ post.updated_at }}</p>
+<button><a href="{% url 'post_delete' pk=post.pk %}">delete it</a></button>
+<button><a href="{% url 'post_edit' pk=post.pk %}">edit it</a></button>
+{% endblock %}
